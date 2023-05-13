@@ -7,11 +7,19 @@
   <title>uploader</title>
 </head>
 <body>
-  <div>请务必确认你上传图片的日期！因为你们不具有删除权限，删除照片需要后台操作。如确实上传错日期，请联系我（2507钟熠）删除。</div>
+  <div>
+    请务必确认你上传图片的日期！因为你们不具有删除权限，删除照片需要后台操作。如确实上传错日期，请联系我（2507钟熠）删除。
+  </div>
 
-  <div>特别注意：你上传的所有图片大小必须小于5MB，否则将会失败。图片状态将在上传控件右下角予以显示。如果你上传后在网站上看不到对应图片，那么可能是网站暂未更新，请稍作等待。</div>
+  <div>
+    特别注意：
+        你上传的所有图片大小必须小于5MB，否则将会失败。图片状态将在上传控件右下角予以显示。如果你上传后在网站上看不到对应图片，那么可能是网站暂未更新，请稍作等待。
+        为了大家的使用方便，本上传端口不设置身份验证，因此也无法避免他人未经允许的上传行为，因此请保密此域名不要外传。
+  </div>
 
-  <button id="upload2022" class="cloudinary-button">上传2507在<b>2022年</b>的图片</button>
+  <button id="upload2022" class="cloudinary-button">
+    上传2507在<b>2022年</b>的图片
+  </button>
 
   <script
     src="https://widget.cloudinary.com/v2.0/global/all.js"
@@ -34,6 +42,39 @@
     );
 
     document.getElementById("upload2022").addEventListener(
+      "click",
+      function () {
+        myWidget.open();
+      },
+      false
+    );
+  </script>
+
+  <button id="upload2023" class="cloudinary-button">
+    上传2507在<b>2023年</b>的图片
+  </button>
+
+  <script
+    src="https://widget.cloudinary.com/v2.0/global/all.js"
+    type="text/javascript"
+  ></script>
+
+  <script type="text/javascript">
+    var myWidget = cloudinary.createUploadWidget(
+      {
+        cloud_name: "dat4mqsnf",
+        api_key: "699686925639313",
+        api_secret: "7H747SmwNDMPbqxPXR0pLjtqa9I",
+        upload_preset: "upload2023",
+      },
+      (error, result) => {
+        if (result.event == "success") {
+          console.log(result.info); // result.info contains data from upload
+        }
+      }
+    );
+
+    document.getElementById("upload2023").addEventListener(
       "click",
       function () {
         myWidget.open();
