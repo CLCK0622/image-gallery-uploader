@@ -7,7 +7,7 @@
   <title>uploader</title>
 </head>
 <body>
-  <button id="upload_widget" class="cloudinary-button">Upload files</button>
+  <button id="upload2022" class="cloudinary-button">Upload files</button>
 
   <script
     src="https://widget.cloudinary.com/v2.0/global/all.js"
@@ -20,7 +20,7 @@
         cloud_name: "dat4mqsnf",
         api_key: "699686925639313",
         api_secret: "7H747SmwNDMPbqxPXR0pLjtqa9I",
-        upload_preset: "ml_default",
+        upload_preset: "upload2022",
       },
       (error, result) => {
         if (result.event == "success") {
@@ -29,7 +29,7 @@
       }
     );
 
-    document.getElementById("upload_widget").addEventListener(
+    document.getElementById("upload2022").addEventListener(
       "click",
       function () {
         myWidget.open();
